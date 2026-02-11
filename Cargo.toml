@@ -1,0 +1,12 @@
+[package]
+name = "open-entities"
+version = "0.1.0"
+edition = "2021"
+description = "A library for working with entities"
+license = "MIT"
+
+[dependencies]
+
+[lib]
+name = "open_entities"
+path = "src/lib.rs"
