@@ -2,7 +2,7 @@
 name = "open-entities"
 version = "0.1.0"
 edition = "2021"
-description = "A library for working with entities"
+description = "A library for working with entities using the bevy_ecs framework"
 license = "MIT"
 authors = ["OpenEntities Contributors"]
 
