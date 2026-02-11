@@ -4,8 +4,11 @@ version = "0.1.0"
 edition = "2021"
 description = "A library for working with entities"
 license = "MIT"
+authors = ["OpenEntities Contributors"]
 
 [dependencies]
+bevy_ecs = "0.14"
+bevy_app = "0.14"
 
 [lib]
 name = "open_entities"
