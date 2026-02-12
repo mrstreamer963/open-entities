@@ -10,6 +10,10 @@ authors = ["OpenEntities Contributors"]
 bevy_ecs = "0.14"
 bevy_app = "0.14"
 
+[[test]]
+name = "integration_tests"
+path = "tests/integration_tests.rs"
+
 [lib]
 name = "open_entities"
 path = "src/lib.rs"

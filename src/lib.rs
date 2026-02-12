@@ -6,9 +6,19 @@
 //! - **Components**: Data attached to entities (Position, Velocity)
 //! - **Systems**: Functions that operate on components
 //! - **Entities**: Unique objects in the world
-
-use bevy_app::{App, Startup, Update};
-use bevy_ecs::prelude::*;
+//!
+//! # Examples
+//!
+//! ```rust
+//! use bevy_app::App;
+//! use open_entities::setup_app;
+//!
+//! fn main() {
+//!     let mut app = App::new();
+//!     setup_app(&mut app);
+//!     app.run();
+//! }
+//! ```
 
 pub mod components;
 pub mod systems;
@@ -18,6 +28,8 @@ pub use systems::{move_system, print_position_system, setup_app};
 
 #[cfg(test)]
 mod tests {
+    use bevy_app::App;
+    use bevy_ecs::prelude::Entity;
     use super::*;
 
     #[test]
