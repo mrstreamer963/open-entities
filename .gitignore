@@ -20,3 +20,4 @@ js-app/pkg/
 .vscode/
 *.swp
 *.swo
+.DS_Store
