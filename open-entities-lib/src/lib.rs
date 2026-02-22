@@ -24,6 +24,9 @@ pub mod components;
 pub mod systems;
 
 pub use components::{Position, Unit, Vehicle, Velocity};
+pub use components::{
+    spawn_from_yaml, spawn_yaml_entities, YamlComponent, YamlEntity, YamlEntityList,
+};
 pub use systems::{move_system, print_position_system, setup_app};
 
 #[cfg(test)]

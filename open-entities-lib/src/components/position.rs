@@ -1,7 +1,8 @@
 use bevy_ecs::prelude::Component;
+use serde::Deserialize;
 
 /// Component: Position of an entity
-#[derive(Component, Clone, Debug)]
+#[derive(Component, Clone, Debug, Deserialize)]
 pub struct Position {
     pub x: f32,
     pub y: f32,
