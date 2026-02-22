@@ -59,35 +59,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
 
 [[package]]
-name = "bevy_app"
-version = "0.14.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a5361d0f8a8677a5d0102cfe7321a7ecd2a8b9a4f887ce0dde1059311cf9cd42"
-dependencies = [
- "bevy_derive",
- "bevy_ecs",
- "bevy_reflect",
- "bevy_tasks",
- "bevy_utils",
- "console_error_panic_hook",
- "downcast-rs",
- "thiserror",
- "wasm-bindgen",
- "web-sys",
-]
-
-[[package]]
-name = "bevy_derive"
-version = "0.14.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3fbfc33a4c6b80760bb8bf850a2cc65a1e031da62fd3ca8b552189104dc98514"
-dependencies = [
- "bevy_macro_utils",
- "quote",
- "syn",
-]
-
-[[package]]
 name = "bevy_ecs"
 version = "0.14.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -489,7 +460,6 @@ checksum = "d6790f58c7ff633d8771f42965289203411a5e5c68388703c06e14f24770b41e"
 name = "open-entities-lib"
 version = "0.1.0"
 dependencies = [
- "bevy_app",
  "bevy_ecs",
  "serde",
  "serde_yaml",

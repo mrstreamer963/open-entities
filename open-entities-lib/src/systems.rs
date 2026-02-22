@@ -1,5 +1,4 @@
 use crate::components::{Position, Velocity};
-use bevy_app::{App, Startup, Update};
 use bevy_ecs::prelude::*;
 
 /// System: Update position based on velocity
@@ -26,11 +25,19 @@ fn setup_system(mut commands: Commands) {
     commands.spawn(Position { x: 10.0, y: 10.0 });
 }
 
-/// Initialize the ECS world
+/// Initialize the ECS world with a schedule
 /// This function provides the wiring logic for an ECS application.
-/// Users of this library should call this function on their App instance.
-pub fn setup_app(app: &mut App) {
-    // Add systems to the startup schedule
-    app.add_systems(Startup, setup_system)
-        .add_systems(Update, (move_system, print_position_system));
+/// Users of this library should call this function on their World instance.
+pub fn setup_app(world: &mut World) {
+    // Create a new schedule
+    let mut schedule = Schedule::default();
+    
+    // Add startup systems
+    schedule.add_systems(setup_system);
+    
+    // Add update systems
+    schedule.add_systems((move_system, print_position_system));
+    
+    // Run the schedule once to execute startup systems
+    schedule.run(world);
 }
