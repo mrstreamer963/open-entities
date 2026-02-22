@@ -23,7 +23,7 @@
 pub mod components;
 pub mod systems;
 
-pub use components::{Position, Velocity};
+pub use components::{Position, Unit, Vehicle, Velocity};
 pub use systems::{move_system, print_position_system, setup_app};
 
 #[cfg(test)]
@@ -37,6 +37,8 @@ mod tests {
         // Test that components can be instantiated
         let _pos = Position { x: 0.0, y: 0.0 };
         let _vel = Velocity { vx: 1.0, vy: 2.0 };
+        let _unit = Unit;
+        let _vehicle = Vehicle;
     }
 
     #[test]
